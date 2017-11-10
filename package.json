@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "electron-log": "^2.2.9",
-    "electron-updater": "^2.10.1"
+    "electron-updater": "^2.16.1"
   },
   "build": {
     "appId": "your.app.id",
@@ -32,7 +32,8 @@
     }
   },
   "scripts": {
-    "postinstall": "install-app-deps && npm run --prefix filebrowser install",
+    "preinstall": "npm --prefix filebrowser install",
+    "postinstall": "electron-builder install-app-deps",
     "//": [
       "'-m' builds mac installers",
       "'-w' builds windows installers",
@@ -43,10 +44,11 @@
       "Build results will be stored locally in the 'dist' folder."
     ],
     "start": "concurrently \"npm run start-electron\" \"npm run start-app\"",
-    "build": "npm run prebuild && build -m -w --x64",
-    "release": "npm run prebuild && build -m -w --x64 ",
     "start-app": "npm run --prefix filebrowser build-dev",
     "start-electron": "electron .",
-    "prebuild": "npm run --prefix filebrowser build"
+    "prebuild": "npm run --prefix filebrowser build",
+    "build": "npm run prebuild && build -m -w --x64",
+    "release": "npm run prebuild && build -m -w --x64 ",
+    "test": "npm run --prefix filebrowser test"
   }
 }
