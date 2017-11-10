@@ -2,173 +2,180 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <title>Electron-Framework</title>
+    <title>Electron-Framework</title>
 
-  <link rel="stylesheet" href="css/reveal.css">
-  <link rel="stylesheet" href="css/theme/black.css">
-  <link rel="stylesheet" href="css/custom.css">
-  <link rel="stylesheet" href="css/masonary.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/masonary.css">
 
-  <!-- Theme used for syntax highlighting of code -->
-  <link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-  <!-- Printing and PDF exports -->
-  <script>
-    var link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
-    document.getElementsByTagName('head')[0].appendChild(link);
-  </script>
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
 </head>
 
 <body>
-  <div class="reveal">
+<div class="reveal">
     <div class="slides">
-      <section>
-        <h1>Desktop Apps</h1>
-        <h2>with web technologies</h2>
-      </section>
-      <section>
         <section>
-          <h2>Desktop Apps vs WebApps</h2>
-          <br/>
-          <br/>
-          <sub>or:</sub>
-          <sub>
-							Why Desktop Apps are not died-out yet.
-					</sub>
+            <h1>Desktop Apps</h1>
+            <h2>with web technologies</h2>
         </section>
         <section>
-          <h3>When desktop apps do convince us:</h3>
-          <ul class="advantages">
-            <li>Git-/SVN-Client</li>
-            <li>picture &amp; video editing</li>
-            <li>offline</li>
-            <li>processing large amounts of data</li>
-            <li>low operating costs</li>
-          </ul>
+            <section>
+                <h2>Desktop Apps vs WebApps</h2>
+                <br/>
+                <br/>
+                <sub>or:</sub>
+                <sub>
+                    Why Desktop Apps are not died-out yet.
+                </sub>
+            </section>
+            <section>
+                <h3>When desktop apps do convince us:</h3>
+                <ul class="advantages">
+                    <li>Git-/SVN-Client</li>
+                    <li>picture &amp; video editing</li>
+                    <li>offline</li>
+                    <li>processing large amounts of data</li>
+                    <li>low operating costs</li>
+                </ul>
+            </section>
+            <section>
+                <h3>... and when not:</h3>
+                <ul class="drawbacks">
+                    <li>updates</li>
+                    <li>user experience</li>
+                    <ul>
+                        <li>design</li>
+                        <li>screen sizes</li>
+                        <li>devices and operating systems</li>
+                    </ul>
+                    <li>installation process</li>
+                </ul>
+            </section>
+            <section>
+                <h3>And what about web apps?</h3>
+            </section>
+            <section data-background-image="assets/opposite.gif" data-background-position="center"
+                     data-background-size="600px">
+            </section>
         </section>
         <section>
-          <h3>... and when not:</h3>
-          <ul class="drawbacks">
-            <li>updates</li>
-            <li>user experience</li>
-            <ul>
-              <li>design</li>
-              <li>screen sizes</li>
-              <li>devices and operating systems</li>
-            </ul>
-            <li>installation process</li>
-          </ul>
+            <section data-background-image="assets/electron_idea.png" data-background-position="center"
+                     data-background-size="80%">
+            </section>
+            <section>
+                <blockquote>
+                    Build cross platform desktop apps with JavaScript, HTML, and CSS
+                </blockquote>
+                <table>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <ul class="small">
+                                <li>
+                                    JavaScript UI libraries (Angular, React)
+                                </li>
+                                <li>
+                                    responsive design frameworks
+                                </li>
+                                <li>
+                                    no latency while loading JS and CSS
+                                </li>
+                                <li>
+                                    file access via NodeJs core modules
+                                </li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul class="small">
+                                <li>
+                                    native menues &amp; notificatios
+                                </li>
+                                <li>
+                                    automatic updates
+                                </li>
+                                <li>
+                                    creation of installation packages
+                                </li>
+                                <li>
+                                    crash reporting<br/>&nbsp;
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <h3>Examples</h3>
+                <div class="wrap">
+                    <div class="box">
+                        <img src="assets/github-desktop-icon-64.png" style="border: 0; background: none"/>
+                    </div>
+                    <div class="box">
+                        <img src="assets/slack-icon-64.png" style="border: 0; background: none"/>
+                    </div>
+                    <div class="box">
+                        <img src="assets/mongodb-compass-icon-64.png" style="border: 0; background: none"/>
+                    </div>
+                    <div class="box">
+                        <img src="assets/atom-icon-64.png" style="border: 0; background: none"/>
+                    </div>
+                    <div class="box">
+                        <img src="assets/visual-studio-code-icon-64.png" style="border: 0; background: none"/>
+                    </div>
+                    <div class="box">
+                        <img src="assets/pencil-icon-64.png" style="border: 0; background: none"/>
+                    </div>
+                    <div class="box">
+                        <img src="assets/twitch-icon-64.png" style="border: 0; background: none"/>
+                    </div>
+                    <div class="box">
+                        <img src="assets/kitematic-icon-64.png" style="border: 0; background: none"/>
+                    </div>
+                    <div class="box">
+                        <img src="assets/google-play-music-desktop-player-icon-64.png"
+                             style="border: 0; background: none"/>
+                    </div>
+                </div>
+                <br/>
+                <small>
+                    more at: <a href="https://electron.atom.io/apps/">https://electron.atom.io/apps/</a>
+                </small>
+            </section>
         </section>
         <section>
-          <h3>And what about web apps?</h3>
-        </section>
-        <section data-background-image="assets/opposite.gif" data-background-position="center" data-background-size="600px">
-        </section>
-      </section>
-			<section>
-				<section data-background-image="assets/electron_idea.png" data-background-position="center" data-background-size="80%">
-				</section>
-				<section>
-					<blockquote>
-						Build cross platform desktop apps with JavaScript, HTML, and CSS
-					</blockquote>
-					<table>
-						<tbody>
-							<tr>
-								<td>
-									<ul class="small">
-										<li>
-											JavaScript UI libraries (Angular, React)
-										</li>
-										<li>
-											responsive design frameworks
-										</li>
-										<li>
-                      no latency while loading JS and CSS
-										</li>
-										<li>
-											file access via NodeJs core modules
-										</li>
-									</ul>
-								</td>
-								<td>
-									<ul class="small">
-										<li>
-											native menues &amp; notificatios
-										</li>
-										<li>
-											automatic updates
-										</li>
-										<li>
-											creation of installation packages
-										</li>
-										<li>
-											crash reporting<br/>&nbsp;
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
-				<section>
-					<h3>Examples</h3>
-          <div class="wrap">
-            <div class="box">
-                <img src="assets/github-desktop-icon-64.png" style="border: 0; background: none"/>
-            </div>
-            <div class="box">
-                <img src="assets/slack-icon-64.png" style="border: 0; background: none"/>
-            </div>
-            <div class="box">
-                <img src="assets/mongodb-compass-icon-64.png" style="border: 0; background: none"/>
-            </div>
-            <div class="box">
-                <img src="assets/atom-icon-64.png" style="border: 0; background: none"/>
-            </div>
-            <div class="box">
-                <img src="assets/visual-studio-code-icon-64.png" style="border: 0; background: none"/>
-            </div>
-            <div class="box">
-                <img src="assets/pencil-icon-64.png" style="border: 0; background: none"/>
-            </div>
-            <div class="box">
-                <img src="assets/twitch-icon-64.png" style="border: 0; background: none"/>
-            </div>
-            <div class="box">
-                <img src="assets/kitematic-icon-64.png" style="border: 0; background: none"/>
-            </div>
-            <div class="box">
-                <img src="assets/google-play-music-desktop-player-icon-64.png" style="border: 0; background: none"/>
-            </div>
-          </div>
-          <br/>
-          <small>
-            more at: <a href="https://electron.atom.io/apps/">https://electron.atom.io/apps/</a>
-          </small>
-				</section>
-			</section>
-      <section>
-        <section>
-          <h2>minimal necessary dev setup</h2>
-          <p>
-            <ul>
-              <li>dependencies</li>
-              <li>electron initialization js file</li>
-              <li>init html file</li>
-              <li>Github repository for distribution</li>
-            </ul>
-          </p>
-        </section>
-        <section>
-          <h3>NodeJS package.json</h3>
-          <pre class="stretch">
+            <section>
+                <h2>minimal necessary dev setup</h2>
+                <p>
+                <ul>
+                    <li>dependencies</li>
+                    <li>electron initialization js file</li>
+                    <li>init html file</li>
+                    <li>Github repository for distribution</li>
+                </ul>
+                </p>
+                <br/>
+                <small>
+                    see example code at: <a href="https://github.com/alxlchnr/electron-desktop-app">https://github.com/alxlchnr/electron-desktop-app</a>
+                </small>
+            </section>
+            <section>
+                <h3>NodeJS package.json</h3>
+                <pre class="stretch">
             <code data-trim data-noescape class="JSON" style="font-size: 70%">
               {
                 "name": "electron-boilerplate",
@@ -211,10 +218,10 @@
               }
             </code>
           </pre>
-        </section>
-        <section>
-          <h3>initialization code</h3>
-          <pre class="stretch">
+            </section>
+            <section>
+                <h3>initialization code</h3>
+                <pre class="stretch">
             <code data-trim data-noescape style="font-size: 70%">
               const {app, BrowserWindow} = require('electron');
               const {autoUpdater} = require("electron-updater");
@@ -238,41 +245,42 @@
               });
             </code>
           </pre>
+            </section>
         </section>
-      </section>
-      <section data-background-image="assets/the-end.gif" data-background-position="center" data-background-size="100%">
-      </section>
+        <section data-background-image="assets/the-end.gif" data-background-position="center"
+                 data-background-size="100%">
+        </section>
     </div>
-  </div>
+</div>
 
-  <script src="lib/js/head.min.js"></script>
-  <script src="js/reveal.js"></script>
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
 
-  <script>
+<script>
     // More info about config & dependencies:
     // - https://github.com/hakimel/reveal.js#configuration
     // - https://github.com/hakimel/reveal.js#dependencies
     Reveal.initialize({
-			slideNumber: true,
-      touch: true,
-      progress: true,
-      controls: true,
-      dependencies: [{
-        src: 'plugin/markdown/marked.js'
-      }, {
-        src: 'plugin/markdown/markdown.js'
-      }, {
-        src: 'plugin/notes/notes.js',
-        async: true
-      }, {
-        src: 'plugin/highlight/highlight.js',
-        async: true,
-        callback: function() {
-          hljs.initHighlightingOnLoad();
-        }
-      }]
+        slideNumber: true,
+        touch: true,
+        progress: true,
+        controls: true,
+        dependencies: [{
+            src: 'plugin/markdown/marked.js'
+        }, {
+            src: 'plugin/markdown/markdown.js'
+        }, {
+            src: 'plugin/notes/notes.js',
+            async: true
+        }, {
+            src: 'plugin/highlight/highlight.js',
+            async: true,
+            callback: function () {
+                hljs.initHighlightingOnLoad();
+            }
+        }]
     });
-  </script>
+</script>
 </body>
 
 </html>
