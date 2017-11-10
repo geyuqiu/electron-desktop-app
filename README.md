@@ -1,6 +1,8 @@
 README an begin of this REPO ist derived from <https://github.com/iffy/electron-updater-example>
 
 This repo contains the **bare minimum code** to have an auto-updating Electron app using [`electron-updater`](https://github.com/electron-userland/electron-builder/tree/master/packages/electron-updater) with releases stored on GitHub.
+The app is a simple showcase for developing a desktop application with current web development frameworks, like Angular. 
+This app will read the content of your user home directory and display it on startup.
 
 If you can't use GitHub, you can use other providers:
 
