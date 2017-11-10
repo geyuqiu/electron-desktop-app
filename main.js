@@ -84,7 +84,7 @@ function createDefaultWindow() {
     win.on('closed', function () {
         win = null;
     });
-    win.loadURL(`file://${__dirname}/version.html#v${app.getVersion()}`);
+    win.loadURL(`file://${__dirname}/filebrowser/dist/index.html`);
     return win;
 }
 

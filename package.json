@@ -5,6 +5,7 @@
   "description": "electron boilerplate for it-economics Conference Day",
   "author": "alxlchnr",
   "devDependencies": {
+    "concurrently": "^3.5.0",
     "electron": "1.6.14",
     "electron-builder": "^19.34.1",
     "electron-builder-squirrel-windows": "^19.34.0"
@@ -31,9 +32,7 @@
     }
   },
   "scripts": {
-    "postinstall": "install-app-deps",
-    "//": "for local development of your application - auto update will not work",
-    "start": "electron .",
+    "postinstall": "install-app-deps && npm run --prefix filebrowser install",
     "//": [
       "'-m' builds mac installers",
       "'-w' builds windows installers",
@@ -43,7 +42,11 @@
       "Build results will be stored locally in the 'dist' folder.",
       "Build results will be stored locally in the 'dist' folder."
     ],
-    "build": "build -m -w --x64",
-    "release": "build -m -w --x64 "
+    "start": "concurrently \"npm run start-electron\" \"npm run start-app\"",
+    "build": "npm run prebuild && build -m -w --x64",
+    "release": "npm run prebuild && build -m -w --x64 ",
+    "start-app": "npm run --prefix filebrowser build-dev",
+    "start-electron": "electron .",
+    "prebuild": "npm run --prefix filebrowser build"
   }
 }
