@@ -1,9 +1,10 @@
 import {async, TestBed} from '@angular/core/testing';
-
 import {AppComponent} from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
+    window.fs = jasmine.createSpyObj("fs", ['readdirSync']);
+    window.os = jasmine.createSpyObj("os", ['homedir']);
     TestBed.configureTestingModule({
       declarations: [
         AppComponent
@@ -17,16 +18,17 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   }));
 
-  it(`should have as title 'app'`, async(() => {
+  it(`should load files of home directory`, async(() => {
+    window.fs.readdirSync.and.returnValue(['fileA', 'fileB']);
+    window.os.homedir.and.returnValue('expectedHomeDir');
+
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('app');
+    const app = fixture.componentInstance;
+    app.ngOnInit();
+
+    expect(window.fs.readdirSync).toHaveBeenCalledWith('expectedHomeDir');
+    expect(app.files).toEqual(['fileA', 'fileB']);
   }));
 
-  it('should render title in a h1 tag', async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to app!');
-  }));
 });
+
