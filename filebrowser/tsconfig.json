@@ -10,7 +10,7 @@
     "target": "es5",
     "typeRoots": [
       "node_modules/@types",
-      "../node_modules/electron"
+      "node_modules/electron"
     ],
     "lib": [
       "es2016",

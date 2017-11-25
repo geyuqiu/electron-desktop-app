@@ -1,10 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Files in your home directory:
-  </h1>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-3">Simple Filebrowser</h1>
+    <p class="lead">This is a a very simple Filebrowser, which will show all files in your homedirectory.</p>
+    <button class="btn btn-primary" (click)="loadFiles()">show me my files</button>
+  </div>
 </div>
-<p *ngFor="let file of files">
-  {{file}}
-</p>
-
+<div class="container" *ngIf="files && files.length">
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let file of files">
+      {{file}}
+    </li>
+  </ul>
+</div>

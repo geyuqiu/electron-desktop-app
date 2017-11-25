@@ -3,8 +3,9 @@ import {AppComponent} from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
-    window.fs = jasmine.createSpyObj("fs", ['readdirSync']);
-    window.os = jasmine.createSpyObj("os", ['homedir']);
+    window.fs = jasmine.createSpyObj('fs', ['readdirSync']);
+    window.os = jasmine.createSpyObj('os', ['homedir']);
+
     TestBed.configureTestingModule({
       declarations: [
         AppComponent
@@ -12,22 +13,25 @@ describe('AppComponent', () => {
     }).compileComponents();
   }));
 
-  it('should create the app', async(() => {
+  it('can be created', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   }));
 
-  it(`should load files of home directory`, async(() => {
-    window.fs.readdirSync.and.returnValue(['fileA', 'fileB']);
-    window.os.homedir.and.returnValue('expectedHomeDir');
+  it('loads files of home directory', async(() => {
+    const expectedHomeDir = 'expectedHomeDir';
+    const expectedFileList = ['fileA', 'fileB'];
+
+    window.fs.readdirSync.and.returnValue(expectedFileList);
+    window.os.homedir.and.returnValue(expectedHomeDir);
 
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    app.ngOnInit();
+    app.loadFiles();
 
-    expect(window.fs.readdirSync).toHaveBeenCalledWith('expectedHomeDir');
-    expect(app.files).toEqual(['fileA', 'fileB']);
+    expect(window.fs.readdirSync).toHaveBeenCalledWith(expectedHomeDir);
+    expect(app.files).toEqual(expectedFileList);
   }));
 
 });

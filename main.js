@@ -1,7 +1,7 @@
 // This is free and unencumbered software released into the public domain.
 // See LICENSE for details
 
-const {app, BrowserWindow, Menu} = require('electron');
+const {app, BrowserWindow} = require('electron');
 const log = require('electron-log');
 const {autoUpdater} = require("electron-updater");
 
@@ -11,29 +11,6 @@ const {autoUpdater} = require("electron-updater");
 autoUpdater.logger = log;
 autoUpdater.logger.transports.file.level = 'info';
 log.info('App starting...');
-
-//-------------------------------------------------------------------
-// Define the menu
-//-------------------------------------------------------------------
-let template = [];
-const name = app.getName();
-template.unshift({
-    label: name,
-    submenu: [
-        {
-            label: 'About ' + name,
-            role: 'about'
-        },
-        {
-            label: 'Quit',
-            accelerator: 'Command+Q',
-            click() {
-                app.quit();
-            }
-        },
-    ]
-});
-
 
 //-------------------------------------------------------------------
 // configure auto updater event listeners
@@ -80,7 +57,7 @@ let win;
 
 function createDefaultWindow() {
     win = new BrowserWindow();
-    win.webContents.openDevTools();
+    win.setMenu(null);
     win.on('closed', function () {
         win = null;
     });
@@ -89,12 +66,10 @@ function createDefaultWindow() {
 }
 
 app.on('ready', function () {
-    // Create the Menu
-    const menu = Menu.buildFromTemplate(template);
-    Menu.setApplicationMenu(menu);
-
     createDefaultWindow();
     autoUpdater.checkForUpdates();
+    setTimeout(() => sendStatusToWindow('I\'m just a message to demonstrate, how to show notifications in Electron.'), 3000);
+
 });
 app.on('window-all-closed', function () {
     app.quit();
