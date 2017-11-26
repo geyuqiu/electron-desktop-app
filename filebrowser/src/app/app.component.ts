@@ -39,7 +39,7 @@ export class AppComponent implements OnInit {
     const _self = this;
     const template = [];
     template.unshift({
-      label: '',
+      label: 'Datei',
       submenu: [
         {
           label: 'About ' + app.getName(),

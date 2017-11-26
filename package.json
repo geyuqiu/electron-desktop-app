@@ -32,7 +32,7 @@
     }
   },
   "scripts": {
-    "preinstall": "npm --prefix filebrowser install",
+    "preinstall": "cd filebrowser && npm install && cd ..",
     "postinstall": "electron-builder install-app-deps",
     "//": [
       "'-m' builds mac installers",
