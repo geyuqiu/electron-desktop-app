@@ -2,8 +2,8 @@
   "name": "electron-boilerplate",
   "version": "1.0.1",
   "main": "main.js",
-  "description": "electron boilerplate for it-economics Conference Day",
-  "author": "alxlchnr",
+  "description": "electron boilerplate forked",
+  "author": "geyuqiu",
   "devDependencies": {
     "concurrently": "^3.5.0",
     "electron": "1.6.14",
@@ -47,8 +47,8 @@
     "start-app": "npm run --prefix filebrowser build-dev",
     "start-electron": "electron .",
     "prebuild": "npm run --prefix filebrowser build",
-    "build": "npm run prebuild && build -m -w --x64",
-    "release": "npm run prebuild && build -m -w --x64 ",
+    "build": "npm run prebuild && build -w --x64",
+    "release": "npm run prebuild && build -w --x64 ",
     "test": "npm run --prefix filebrowser test"
   }
 }
