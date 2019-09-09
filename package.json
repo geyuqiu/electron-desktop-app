@@ -1,6 +1,6 @@
 {
   "name": "electron-boilerplate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "main.js",
   "description": "electron boilerplate for it-economics Conference Day",
   "author": "alxlchnr",
@@ -12,15 +12,15 @@
   },
   "dependencies": {
     "electron-log": "^2.2.9",
-    "electron-updater": "^2.16.1"
+    "electron-updater": "^2.18.2"
   },
   "build": {
     "appId": "your.app.id",
     "publish": [
       {
         "provider": "github",
-        "owner": "YOUR_USERNAME",
-        "repo": "YOUR_REPOSITORY"
+        "owner": "geyuqiu",
+        "repo": "electron-desktop-app"
       }
     ],
     "mac": {
