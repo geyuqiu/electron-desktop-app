@@ -68,7 +68,7 @@ function createDefaultWindow() {
 app.on('ready', function () {
     createDefaultWindow();
     autoUpdater.checkForUpdates();
-    setTimeout(() => sendStatusToWindow('I\'m just a message to demonstrate, how to show notifications in Electron.'), 3000);
+    // setTimeout(() => sendStatusToWindow('I\'m just a message to demonstrate, how to show notifications in Electron.'), 3000);
 
 });
 app.on('window-all-closed', function () {
