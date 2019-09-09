@@ -28,7 +28,7 @@
       "target": "dmg"
     },
     "win": {
-      "target": "squirrel",
+      "target": "nsis",
       "verifyUpdateCodeSignature": false
     }
   },
