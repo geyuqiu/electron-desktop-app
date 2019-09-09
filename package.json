@@ -49,7 +49,7 @@
     "start-electron": "electron .",
     "prebuild": "npm run --prefix filebrowser build",
     "build": "npm run prebuild && build -w --x64",
-    "release": "npm run prebuild && build -w --x64 ",
+    "release": "npm run prebuild && build -w --x64 && npm run --prefix dist release",
     "test": "npm run --prefix filebrowser test"
   }
 }
