@@ -28,7 +28,8 @@
       "target": "dmg"
     },
     "win": {
-      "target": "squirrel"
+      "target": "squirrel",
+      "verifyUpdateCodeSignature": false
     }
   },
   "scripts": {
