@@ -30,8 +30,8 @@ autoUpdater.on('update-available', function () {
 autoUpdater.on('update-not-available', function () {
     sendStatusToWindow('Update not available.');
 });
-autoUpdater.on('error', function () {
-    sendStatusToWindow('Error in auto-updater.');
+autoUpdater.on('error', function (error) {
+    sendStatusToWindow(JSON.stringify(error));
 });
 autoUpdater.on('download-progress', function (progressObj) {
     let log_message = "Download speed: " + progressObj.bytesPerSecond;
