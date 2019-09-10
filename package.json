@@ -7,8 +7,7 @@
   "devDependencies": {
     "concurrently": "^3.5.0",
     "electron": "1.6.14",
-    "electron-builder": "^19.34.1",
-    "electron-builder-squirrel-windows": "^19.34.0"
+    "electron-builder": "^19.34.1"
   },
   "dependencies": {
     "electron-log": "^2.2.9",
