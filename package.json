@@ -1,6 +1,6 @@
 {
   "name": "electron-boilerplate",
-  "version": "0.0.4",
+  "version": "1.2.7",
   "main": "main.js",
   "description": "electron boilerplate forked",
   "author": "geyuqiu",
@@ -20,7 +20,7 @@
       {
         "provider": "github",
         "owner": "geyuqiu",
-        "repo": "electron-desktop-app"
+        "repo": "deployElectron"
       }
     ],
     "mac": {
@@ -47,8 +47,8 @@
     "start": "concurrently \"npm run start-electron\" \"npm run start-app\"",
     "start-app": "npm run --prefix filebrowser build-dev",
     "start-electron": "electron .",
-    "prebuild": "npm run --prefix filebrowser build",
-    "build": "rm -f dist/*.exe && rm -f dist/*.blockmap && npm run prebuild && build -w --x64 && cd dist && gitPush.sh 'update latest.yml and version in package.json' && cd .. && npm run releaseSubmodule",
+    "prebuild": "rm -f dist/*.exe && rm -f dist/*.blockmap && npm run --prefix filebrowser build",
+    "build": "npm run prebuild && build -w --x64 && cd dist && gitPush.sh 'update latest.yml and version in package.json' && cd .. && npm run releaseSubmodule",
     "releaseSubmodule": "npm run --prefix dist release",
     "release": "npm run prebuild && build -w --x64",
     "test": "npm run --prefix filebrowser test"
