@@ -5,3 +5,4 @@ yarn.lock
 .vscode
 .angulardoc.json
 package-lock.json
+*.DS*
