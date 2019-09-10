@@ -1,6 +1,6 @@
 {
   "name": "electron-boilerplate",
-  "version": "1.2.17",
+  "version": "1.2.19",
   "main": "main.js",
   "description": "electron boilerplate forked",
   "author": "geyuqiu",
@@ -48,7 +48,7 @@
     "start-app": "npm run --prefix filebrowser build-dev",
     "start-electron": "electron .",
     "prebuild": "rm -f dist/*.exe && rm -f dist/*.blockmap && rm -f dist/latest.yml && npm run --prefix filebrowser build",
-    "build": "npm run prebuild && build -w --x64 && cd dist && ./gitPush.sh 'update latest.yml and version in package.json' && cd .. && npm run releaseSubmodule",
+    "build": "npm run prebuild && build -w --x64 && cd dist && ./changeDotToDash.sh && ./gitPush.sh 'update latest.yml and version in package.json' && cd .. && npm run releaseSubmodule",
     "releaseSubmodule": "npm run --prefix dist release",
     "release": "npm run prebuild && build -w --x64",
     "test": "npm run --prefix filebrowser test"
